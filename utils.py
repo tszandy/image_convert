@@ -3,8 +3,6 @@ import numpy as np
 import cv2
 import time
 
-img=imread('dog.png')[:,:,:3].astype('float32')
-
 def RBG_to_dilation(img):
     kernel = np.ones((3,3),np.uint8)
     erosion = cv2.erode(img,kernel,iterations = 1)
